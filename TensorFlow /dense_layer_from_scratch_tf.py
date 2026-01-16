@@ -11,3 +11,4 @@ def neural_network(input_tensor,input_size,output_size):
     
     # Step 3: Linear transformation + ReLU activation
     return tf.nn.relu(tf.matmul(input_tensor,weights)+ biases)
+
