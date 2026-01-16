@@ -25,3 +25,47 @@ starting from **core basics** and moving towards **deep learning & TensorFlow im
 ---
 
 ## 🗂 Repository Structure
+01_Basics/              → ML foundations
+02_Neural_Networks/     → NN from scratch
+03_TensorFlow/          → TF-based models
+04_Advanced_ML/         → AML concepts
+
+---
+
+## 🧪 Technologies Used
+
+- Python
+- TensorFlow
+- NumPy
+
+---
+
+## ⭐ Why Star This Repo?
+
+- Clean & beginner-friendly code
+- Concepts explained step-by-step
+- Practical implementations
+- Ideal for revision & interviews
+
+---
+
+## 📈 Roadmap (Coming Soon)
+
+- CNNs
+- RNNs & LSTMs
+- Real-world ML projects
+- Model training & evaluation
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!  
+Feel free to fork, improve, and submit a PR.
+
+---
+
+## 📬 Author
+
+**Aman Gupta**  
+Machine Learning Enthusiast 🚀
