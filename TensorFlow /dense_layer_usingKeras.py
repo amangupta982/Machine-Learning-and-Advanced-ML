@@ -9,10 +9,11 @@ model= models.Sequential([
     layers.Dense(2,activation='relu')   #Output Layer 
 ])
 
-#taking the input to check the performance of the model 
-
+# Create a random input (batch size = 1, 10 features)
 input_tensor=tf.random.normal([1,10])
 
-#model Output
+# Forward pass
 output=model(input_tensor)
+
+# Print outputs
 print("Model Output:",output.numpy())
