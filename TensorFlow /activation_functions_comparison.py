@@ -11,3 +11,11 @@ sigmoid_output=tf.nn.sigmoid(input_tensor)
 print("Input:", input_tensor.numpy())
 print("ReLU Output:", relu_output.numpy())
 print("Sigmoid Output:", sigmoid_output.numpy())
+
+
+"""
+Observation:
+- ReLU outputs zero for negative values and keeps positives unchanged.
+- Sigmoid squashes values between 0 and 1.
+- ReLU is preferred in hidden layers to avoid vanishing gradients.
+"""
