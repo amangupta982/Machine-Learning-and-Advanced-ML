@@ -27,3 +27,9 @@ sentences = tokenize_sentences(text)
 # Print each sentence with numbering
 for i, sentence in enumerate(sentences):
     print(f"Sentence {i+1}: {sentence}")
+    
+    
+#EXAMPLE OUTPUT:
+# Sentence 1: NLTK is a leading platform for building Python programs to work with human language data.
+# Sentence 2: It provides easy-to-use interfaces to over 50 corpora and lexical resources such as WordNet,
+# along with a suite of text processing libraries for classification, tokenization, stemming, tagging, parsing, and semantic reasoning.
