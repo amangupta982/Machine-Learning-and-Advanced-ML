@@ -56,3 +56,9 @@ processed_words = preprocess_text(text)
 # Display result
 print("Processed Words:")
 print(processed_words)
+
+
+"""Output from the code :
+Processed Words:
+['natural', 'language', 'processing', 'help', 'machine', 'understand', 
+'human', 'language', 'easily']"""
