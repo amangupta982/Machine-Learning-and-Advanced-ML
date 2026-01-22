@@ -1,3 +1,15 @@
+"""
+Text Preprocessing in NLP using NLTK
+
+This script demonstrates:
+1. Word Tokenization
+2. Stopword Removal
+3. Lemmatization
+
+Author: Aman Gupta
+Topic: NLP Basics - Text Preprocessing Pipeline
+"""
+
 # Import NLTK and required modules
 import nltk
 from nltk.tokenize import word_tokenize
