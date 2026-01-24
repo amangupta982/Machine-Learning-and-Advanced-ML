@@ -26,3 +26,7 @@ filtered_text = remove_stopwords(text)
 
 # Print filtered text
 print(filtered_text)
+
+#Output for the above code : 
+#NLTK leading platform building Python programs work human language data .
+#so here the is ,a for etc is removed because they are the stopwords
