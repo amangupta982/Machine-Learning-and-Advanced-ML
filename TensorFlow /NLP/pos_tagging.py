@@ -1,6 +1,9 @@
 # Parts of Speech Tagging
 
 import nltk
+
+# remove the below comment if you are running this first time 
+# nltk.download('averaged_perceptron_tagger_eng')
 from nltk.tokenize import word_tokenize
 
 def pos_tagging(text):
