@@ -1,14 +1,40 @@
-
+# ============================================================
+# 📌 Named Entity Recognition (NER) using NLTK
+# ============================================================
+# Named Entity Recognition is an NLP technique used to identify
+# important entities in text such as:
+#   - People (PERSON)
+#   - Organizations (ORG)
+#   - Locations (GPE)
+#   - Dates, Money, etc.
+#
+# This example uses NLTK's built-in NE Chunker.
+# ============================================================
 
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk import pos_tag, ne_chunk
 
 
+# ------------------------------------------------------------
+# Step 1: Download Required NLTK Resources
+# ------------------------------------------------------------
+# These datasets/models are needed for:
+#   - Tokenization
+#   - POS Tagging
+#   - Named Entity Chunking
+# ------------------------------------------------------------
+
 nltk.download("averaged_perceptron_tagger")
 nltk.download("maxent_ne_chunker")
 nltk.download("words")
 
+# ------------------------------------------------------------
+# Step 2: Function for Named Entity Recognition
+# ------------------------------------------------------------
+# This function takes a sentence as input and returns
+# the named entities present in it.
+# ------------------------------------------------------------
 
 def ner(text):
     """
@@ -32,9 +58,21 @@ def ner(text):
 
     return named_entities
 
+# ------------------------------------------------------------
+# Step 3: Example Input Text
+# ------------------------------------------------------------
+# This sentence contains:
+#   - Apple (Organization)
+#   - California (Location)
+#   - United States (Location)
+#   - Steve Jobs (Person)
+# ------------------------------------------------------------
 
 text = "Apple is a company based in California, United States. Steve Jobs was one of its founders."
 
+# ------------------------------------------------------------
+# Step 4: Run NER Function and Print Output
+# ------------------------------------------------------------
 
 named_entities = ner(text)
 
