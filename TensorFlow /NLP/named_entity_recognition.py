@@ -25,9 +25,11 @@ from nltk import pos_tag, ne_chunk
 #   - Named Entity Chunking
 # ------------------------------------------------------------
 
-nltk.download("averaged_perceptron_tagger")
-nltk.download("maxent_ne_chunker")
-nltk.download("words")
+#Remove the below comment if you're running it the first time 
+# nltk.download("averaged_perceptron_tagger")
+# nltk.download("maxent_ne_chunker")
+# nltk.download("words")
+# nltk.download('maxent_ne_chunker_tab')
 
 # ------------------------------------------------------------
 # Step 2: Function for Named Entity Recognition
