@@ -80,3 +80,27 @@ named_entities = ner(text)
 
 print("✅ Named Entities Found:")
 print(named_entities)
+
+
+
+
+#Output of the above code : 
+# ✅ Named Entities Found:
+# (S
+#   (GPE Apple/NNP)
+#   is/VBZ
+#   a/DT
+#   company/NN
+#   based/VBN
+#   in/IN
+#   (GPE California/NNP)
+#   ,/,
+#   (GPE United/NNP States/NNPS)
+#   ./.
+#   (PERSON Steve/NNP Jobs/NNP)
+#   was/VBD
+#   one/CD
+#   of/IN
+#   its/PRP$
+#   founders/NNS
+#   ./.)
