@@ -86,3 +86,18 @@ result = chunk_parser.parse(pos_tags)
 
 print("✅ Chunking Result:")
 print(result)
+
+
+#OUTPUT :
+# ✅ Chunking Result:
+# (S
+#   Educative/JJ
+#   Answers/NNPS
+#   (VP is/VBZ (NP a/DT free/JJ web/NN))
+#   (NP encyclopedia/NN)
+#   written/VBN
+#   by/IN
+#   (NP devs/NN)
+#   for/IN
+#   (NP devs/NN)
+#   ./.)
