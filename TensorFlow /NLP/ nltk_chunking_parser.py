@@ -87,3 +87,17 @@ chunked_result = chunk_parser.parse(pos_tags)
 
 print("✅ Chunked Output:")
 print(chunked_result)
+
+#OUTPUT: 
+# ✅ Chunked Output:
+# (S
+#   Educative/JJ
+#   Answers/NNPS
+#   (VP is/VBZ (NP a/DT free/JJ web/NN))
+#   (NP encyclopedia/NN)
+#   written/VBN
+#   by/IN
+#   (NP devs/NN)
+#   for/IN
+#   (NP devs/NN)
+#   ./.)
