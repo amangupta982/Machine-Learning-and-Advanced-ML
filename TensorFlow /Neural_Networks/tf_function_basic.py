@@ -20,3 +20,7 @@ tf_function_value = a_function_that_uses_a_graph(x1, y1, b1).numpy()
 
 print("Original Function Output:", orig_value)
 print("TensorFlow Function Output:", tf_function_value)
+
+#OUTPUT:
+# Original Function Output: [[12.]]
+# TensorFlow Function Output: [[12.]]
