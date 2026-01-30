@@ -34,3 +34,8 @@ if __name__ == "__main__":
     trained_model = train_model()
     print("Final Weight:", trained_model.W.numpy())
     print("Final Bias:", trained_model.B.numpy())
+    
+    
+# Output:
+# Final Weight: [1.9902446]
+# Final Bias: [1.0286819]

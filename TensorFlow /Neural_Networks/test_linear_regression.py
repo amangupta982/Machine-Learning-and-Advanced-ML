@@ -23,3 +23,11 @@ class LinearRegressionTest(tf.test.TestCase):
 
 if __name__ == "__main__":
     tf.test.main()
+
+# Output :
+# Test.test_prediction_output): 0.09s
+# [       OK ] LinearRegressionTest.test_prediction_output
+# [ RUN      ] LinearRegressionTest.test_session
+# [  SKIPPED ] LinearRegressionTest.test_session - Not a test.
+# ----------------------------------------------------------------------
+# Ran 3 tests in 0.235s
