@@ -1,3 +1,16 @@
+# ============================================================
+# 🤖 Simple Rule-Based Chatbot in Python
+# ============================================================
+# This is a beginner-friendly chatbot that responds
+# using predefined rules.
+#
+# Concepts Covered:
+#   ✅ Input/Output
+#   ✅ Basic NLP Text Matching
+#   ✅ Simple Conversation Flow
+# ============================================================
+
+
 def chatbot():
     print("🤖 Chatbot: Hello! I am your simple chatbot.")
     print("Type 'bye' to exit.\n")
