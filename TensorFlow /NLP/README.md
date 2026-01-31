@@ -34,3 +34,40 @@ Install NLTK:
 
 ```bash
 pip install nltk
+
+
+Download datasets:
+import nltk
+nltk.download("punkt")
+nltk.download("stopwords")
+nltk.download("averaged_perceptron_tagger")
+nltk.download("maxent_ne_chunker")
+nltk.download("words")
+
+▶️ Running the Scripts
+
+Run any file using:
+python filename.py
+
+
+🚀 Future Enhancements
+
+✨ Sentiment Analysis
+✨ Text Summarization
+✨ TF-IDF Vectorization
+✨ spaCy Advanced NLP
+
+
+👨‍💻 Author
+
+Aman Gupta
+Exploring AI, NLP, and Real-World Applications 🚀
+
+
+⭐ Support
+
+If you like this repo:
+
+🌟 Star it
+🍴 Fork it
+📢 Share it
