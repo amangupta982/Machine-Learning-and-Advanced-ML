@@ -37,6 +37,8 @@ starting from **core basics** and moving towards **deep learning & TensorFlow im
 - Python
 - TensorFlow
 - NumPy
+- NLTK
+- more coming soon 
 
 ---
 
