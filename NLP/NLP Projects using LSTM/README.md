@@ -1,10 +1,12 @@
 🏏 Cricket Commentary Generator using LSTM
 
+
 📌 Project Overview
 
 The Cricket Commentary Generator is a Neural Language Model built using Long Short-Term Memory (LSTM) networks. The system learns patterns from real cricket match commentary and generates realistic cricket commentary automatically based on a user-provided input prompt.
 
 This project demonstrates the application of Deep Learning and Natural Language Processing (NLP) for automated text generation in the sports domain.
+
 
 🎯 Objective
 
@@ -27,3 +29,14 @@ The objective of this project is to:
 ✅ Model saving and loading (no retraining required)
 ✅ Memory-efficient training using sparse categorical loss
 ✅ Interactive terminal-based commentary generation
+
+
+📂 Dataset
+
+The dataset consists of ball-by-ball cricket commentary stored in multiple CSV files.
+
+Dataset structure:
+COMMENTARY_INTL_MATCH/
+ ├── 1122886_COMMENTARY.csv
+ ├── 1122887_COMMENTARY.csv
+ ├── ...
