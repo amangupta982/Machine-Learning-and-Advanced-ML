@@ -14,3 +14,16 @@ The objective of this project is to:
 	•	Predict the next word in a sequence
 	•	Generate realistic cricket commentary automatically
 	•	Demonstrate practical NLP text generation using deep learning
+
+
+🚀 Features
+
+✅ Neural Language Model using LSTM
+✅ Bidirectional LSTM architecture
+✅ Real-world cricket commentary dataset
+✅ Automatic text generation
+✅ Top-K sampling for diverse output
+✅ Temperature-based prediction
+✅ Model saving and loading (no retraining required)
+✅ Memory-efficient training using sparse categorical loss
+✅ Interactive terminal-based commentary generation
