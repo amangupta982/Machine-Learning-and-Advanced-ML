@@ -3,7 +3,10 @@ import pandas as pd
 import numpy as np
 import tensorflow as tf
 import pickle
+import nltk
+import re
 
+from nltk.tokenize import word_tokenize
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.models import Sequential, load_model
@@ -12,13 +15,38 @@ from tensorflow.keras.callbacks import EarlyStopping
 
 
 # ============================================
+# ✅ DOWNLOAD NLTK DATA (RUNS ONCE)
+# ============================================
+
+nltk.download('punkt')
+
+
+# ============================================
 # ✅ FILE PATHS (MODEL + TOKENIZER)
 # ============================================
 
 DATA_FOLDER = "COMMENTARY_INTL_MATCH"
-
 MODEL_PATH = "cricket_model.h5"
 TOKENIZER_PATH = "tokenizer.pkl"
+
+
+# ============================================
+# ✅ SMALL NLTK PREPROCESSING FUNCTION
+# ============================================
+
+def clean_text(text):
+
+    # lowercase
+    text = text.lower()
+
+    # remove punctuation
+    text = re.sub(r'[^a-z\s]', '', text)
+
+    # nltk tokenization
+    tokens = word_tokenize(text)
+
+    # join back to sentence
+    return " ".join(tokens)
 
 
 # ============================================
@@ -41,11 +69,12 @@ print("✅ Total Raw Lines:", len(all_lines))
 
 
 # ============================================
-# ✅ STEP 2: LIMIT DATASET SIZE
+# ✅ STEP 2: LIMIT DATASET SIZE + CLEAN USING NLTK
 # ============================================
 
 MAX_LINES = 30000
-corpus = [line.lower().strip() for line in all_lines[:MAX_LINES]]
+
+corpus = [clean_text(line) for line in all_lines[:MAX_LINES]]
 
 print("✅ Using Lines for Training:", len(corpus))
 
