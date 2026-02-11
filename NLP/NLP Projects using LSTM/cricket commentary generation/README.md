@@ -92,3 +92,19 @@ tokenizer.pkl
 
 On subsequent runs, the model loads automatically without retraining.
 
+📈 Results
+
+The model successfully learns cricket commentary patterns and generates contextually relevant commentary based on user input.
+
+Example:
+
+Input:virat hits a
+
+Output: virat hits a beautiful cover drive through extra cover for four runs
+
+🔮 Future Improvements
+	•	Streamlit web interface
+	•	Real-time match data integration
+	•	Attention mechanism for improved context learning
+	•	Multi-language commentary generation
+	•	Transformer-based model upgrade
