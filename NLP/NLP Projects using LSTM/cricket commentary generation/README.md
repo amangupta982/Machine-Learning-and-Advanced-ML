@@ -74,3 +74,21 @@ pip install tensorflow pandas numpy
 
 2️⃣ Run the Program
 python cricket_commentary_generator.py
+
+3️⃣ Enter Input Prompt
+rohit plays a
+
+Output:
+rohit plays a brilliant shot through point for a single as the bowler adjusts the field
+
+
+💾 Model Saving
+
+The model is trained only once and saved as:
+cricket_model.h5
+
+Tokenizer is saved as:
+tokenizer.pkl
+
+On subsequent runs, the model loads automatically without retraining.
+
