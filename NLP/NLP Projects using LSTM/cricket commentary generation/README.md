@@ -40,3 +40,37 @@ COMMENTARY_INTL_MATCH/
  ├── 1122886_COMMENTARY.csv
  ├── 1122887_COMMENTARY.csv
  ├── ...
+
+ Each CSV file contains a column named:
+ Commentary
+
+ which is used for training the language model.
+
+ ⚙️ Technologies Used
+	•	Python
+	•	TensorFlow / Keras
+	•	NumPy
+	•	Pandas
+	•	Natural Language Processing (NLP)
+	•	LSTM (Long Short-Term Memory)
+
+
+🏗️ Project Structure
+Cricket-Commentary-Generator/
+│
+├── COMMENTARY_INTL_MATCH/
+│   ├── *.csv
+│
+├── cricket_commentary_generator.py
+├── cricket_model.h5
+├── tokenizer.pkl
+├── README.md
+
+
+▶️ How to Run the Project
+
+1️⃣ Install Dependencies
+pip install tensorflow pandas numpy
+
+2️⃣ Run the Program
+python cricket_commentary_generator.py
