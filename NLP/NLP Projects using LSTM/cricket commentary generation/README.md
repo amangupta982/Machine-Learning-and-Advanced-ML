@@ -108,3 +108,10 @@ Output: virat hits a beautiful cover drive through extra cover for four runs
 	•	Attention mechanism for improved context learning
 	•	Multi-language commentary generation
 	•	Transformer-based model upgrade
+
+
+	👨‍💻 Author
+
+Aman Gupta
+
+AI / NLP Project – Neural Language Model using LSTM
