@@ -5,54 +5,79 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 import pickle
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
+
 from preprocess import clean_text
 from feature_engineering import extra_features
 from model import train_gmm
-from predict import load_model, predict_style
+from predict import predict_style
+
+MODEL_PATH = "gmm_model.pkl"
+VECTORIZER_PATH = "vectorizer.pkl"
 
 # ---------------------------------
-# SAMPLE DATA
+# FUNCTION: TRAIN MODEL (ONLY ONCE)
 # ---------------------------------
 
-texts = [
-    "The research paper presents a detailed analysis of data models.",
-    "Hey bro that movie was awesome lol",
-    "The algorithm optimizes system performance efficiently.",
-    "I feel so happy and excited today!",
-    "This study evaluates statistical methods.",
-    "haha that was funny man",
-    "Machine learning model improves accuracy.",
-    "I love this amazing experience so much"
-]
+def train_and_save_model():
+
+    print("Training model...")
+
+    texts = [
+        "The research paper presents a detailed analysis of data models.",
+        "Hey bro that movie was awesome lol",
+        "The algorithm optimizes system performance efficiently.",
+        "I feel so happy and excited today!",
+        "This study evaluates statistical methods.",
+        "haha that was funny man",
+        "Machine learning model improves accuracy.",
+        "I love this amazing experience so much"
+    ]
+
+    cleaned_texts = [clean_text(t) for t in texts]
+
+    vectorizer = TfidfVectorizer(max_features=1000)
+    tfidf_features = vectorizer.fit_transform(cleaned_texts).toarray()
+
+    # Save vectorizer
+    with open(VECTORIZER_PATH, "wb") as f:
+        pickle.dump(vectorizer, f)
+
+    extra_feat = extra_features(cleaned_texts)
+    X = np.hstack((tfidf_features, extra_feat))
+
+    gmm = train_gmm(X)
+
+    print("Model trained and saved successfully!")
+
+    return gmm, vectorizer
+
 
 # ---------------------------------
-# NLP PREPROCESSING
+# FUNCTION: LOAD MODEL
 # ---------------------------------
 
-cleaned_texts = [clean_text(t) for t in texts]
+def load_existing_model():
 
-vectorizer = TfidfVectorizer(max_features=1000)
-tfidf_features = vectorizer.fit_transform(cleaned_texts).toarray()
+    print("Loading existing model...")
 
-with open("vectorizer.pkl", "wb") as f:
-    pickle.dump(vectorizer, f)
+    with open(MODEL_PATH, "rb") as f:
+        gmm = pickle.load(f)
 
-# ---------------------------------
-# EXTRA STYLE FEATURES
-# ---------------------------------
+    with open(VECTORIZER_PATH, "rb") as f:
+        vectorizer = pickle.load(f)
 
-extra_feat = extra_features(cleaned_texts)
+    return gmm, vectorizer
 
-# Combine features
-X = np.hstack((tfidf_features, extra_feat))
 
 # ---------------------------------
-# TRAIN MODEL (EM-GMM)
+# MAIN LOGIC
 # ---------------------------------
 
-gmm = train_gmm(X)
+if os.path.exists(MODEL_PATH) and os.path.exists(VECTORIZER_PATH):
+    gmm, vectorizer = load_existing_model()
+else:
+    gmm, vectorizer = train_and_save_model()
 
-print("Model trained successfully!")
 
 # ---------------------------------
 # TEST PREDICTION
