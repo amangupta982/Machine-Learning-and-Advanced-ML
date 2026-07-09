@@ -2,7 +2,7 @@ from sklearn.ensemble import BaggingClassifier
 from sklearn.datasets import load_iris
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score 
+from sklearn.metrics import accuracy_score
 
 dataset = load_iris()
 X = dataset.data
@@ -15,4 +15,4 @@ bagging.fit(X_train , y_train)
 
 y_pred = bagging.predict(X_test)
 
-print ("Accuray_score is :", accuracy_score(y_test , y_pred))
+print ("Accuray_score is :",accuracy_score(y_test , y_pred))
